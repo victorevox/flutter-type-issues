@@ -9,9 +9,6 @@ class FreezedPage extends StatefulWidget {
 }
 
 class _FreezedPageState extends State<FreezedPage> {
-  bool _makeItCrash = false;
-  bool _makeItWork = false;
-
   List<FreezedExampleType> exampleType = List<FreezedExampleType>.of([]);
 
   @override
@@ -35,40 +32,12 @@ class _FreezedPageState extends State<FreezedPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // if (_makeItCrash)
-            // TypeErrorWidget<ExampleListItem>(
-            //   items: _items,
-            //   idMapper: (item) {
-            //     return item.id;
-            //   },
-            // ),
             ElevatedButton(
               onPressed: () {
-                // setState(() {
-                //   _makeItWork = false;
-                //   _makeItCrash = true;
-                // });
                 _userType();
               },
               child: const Text("Make it crash"),
             ),
-            // if (_makeItWork && !_makeItCrash)
-            // TypeWorkaroundWidget<ExampleListItem>(
-            //   items: _items,
-            //   idMapper: (item) {
-            //     return item.id;
-            //   },
-            // ),
-            // if (!_makeItCrash)
-            //   ElevatedButton(
-            //     onPressed: () {
-            //       setState(() {
-            //         _makeItWork = true;
-            //         _makeItCrash = false;
-            //       });
-            //     },
-            //     child: const Text("Make it works"),
-            //   ),
           ],
         ),
       ),
