@@ -36,7 +36,7 @@ class _WidgetExamplePageState extends State<WidgetExamplePage> {
             if (_makeItCrash)
               TypeErrorWidget<ExampleListItem>(
                 items: _items,
-                idMapper: (ExampleListItem item) {
+                idMapper: (item) {
                   return item.id;
                 },
               ),

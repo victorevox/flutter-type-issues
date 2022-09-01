@@ -14,10 +14,10 @@ class TypeErrorWidget<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<TypeErrorWidget> createState() => _TypeErrorWidgetState();
+  State<TypeErrorWidget<T>> createState() => _TypeErrorWidgetState<T>();
 }
 
-class _TypeErrorWidgetState extends State<TypeErrorWidget> {
+class _TypeErrorWidgetState<T> extends State<TypeErrorWidget<T>> {
   late List<String> _itemsIds;
 
   @override
